@@ -98,7 +98,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC-3"
+TIME_ZONE = "America/Sao_Paulo"
 
 USE_I18N = True
 
@@ -123,7 +123,7 @@ AUTH_USER_MODEL = "core.User"
 
 # Bot settings
 # https://core.telegram.org/widgets/login
-BOT_TOKEN = env("BOT_TOKEN")
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
 
 # Rest framework settings
 
