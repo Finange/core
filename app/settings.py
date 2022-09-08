@@ -2,7 +2,6 @@ import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-import environ
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -10,7 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
-env = environ.Env(DEBUG=(bool, False))
+env = os.environ.get(DEBUG=(bool, False))
 env_file = os.path.join(BASE_DIR, ".env")
 
 if os.path.isfile(env_file):
